@@ -1,0 +1,13 @@
+https://nagcloudlab.notion.site/day-1-2a75bab9bf87802ab6d2f4c386702636?source=copy_link
+
+
+learing-path for any programming language:
+------------------------------------------
+
+- how to bring/reperesent data into memory --> variables, data-types
+- how to manipulate data in memory - functions, methods, operators
+- how to organize code - control structures, functions, classes, modules
+- how to use language core-modules - file system, networking, threading
+- how to use 3rd party modules - package managers, popular libraries
+
+--------------------------------------------
