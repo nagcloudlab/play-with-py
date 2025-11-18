@@ -1,1 +1,175 @@
 https://nagcloudlab.notion.site/day-1-2a75bab9bf87802ab6d2f4c386702636?source=copy_link
+
+
+---
+
+what is an object?
+
+ -> data/info/properties/attributes -> state ( data )
+ -> actions/functions/methods/work  -> behavior ( functions)
+ -> address/reference  -> identity ( location in memory )
+
+ object = state + behavior + identity ( sbi )
+
+---
+
+to create similar objects, we use obj's templates = classes
+
+--
+
+class = blueprint for creating objects
+object = instance of a class
+
+--
+
+object's concepts:
+---------------------------
+
+-> frontend / interfcae / abstraction
+    why we need it?
+    ---------------
+    -> easy-use/learn by dependent
+    -> for loose-coupling
+-> backend / implementation / details ( encapsulation )
+    why we need it?
+    ---------------
+    -> hide complexity
+    -> for security
+-> inheritance
+    why we need it?
+    -> resue code from more general-class to more specific class
+
+-> polymorphism
+    why we need it?
+    ---------------
+    -> same interface, different implementation
+
+---------------------------
+
+object's principles aka SOLID principles
+----------------------------------------
+
+-> single responsibility principle
+    -> a class should have only one reason to change
+-> open-closed principle
+    -> software entities ( classes, modules, functions, etc ) should be open for extension, but closed for modification
+-> liskov substitution principle
+    -> objects of a superclass should be replaceable with objects of a subclass without affecting the correctness
+-> interface segregation principle
+    -> many specific interfaces are better than one general interface
+-> dependency inversion principle
+    -> depend on abstractions, not on concretions
+
+
+----------------------------------------
+Python OOP - Payment System Examples
+----------------------------------------
+
+Level 1: Basic Class & Objects - Bank Account
+-----------------------------------------------
+
+Explaining Points:
+
+-> Class = Blueprint (like account opening form)
+-> Object = Actual instance (like your real account)
+-> __init__ = Constructor (runs when account is created)
+-> self = Refers to the specific account instance
+-> Attributes = Data stored in object (account details)
+-> Methods = Actions object can perform (deposit, withdraw)
+
+-----------------------
+
+How to create an object?
+
+-> dynamic memory allocation -> new keyword ( in other languages )
+-> intialization -> constructor method ( __init__ in python )
+
+------------------------
+
+Level 2: Adding Methods - Deposit & Withdraw
+-----------------------------------------------
+
+Explaining Points:
+
+Methods can modify object state (balance changes)
+Methods can have logic (validation checks)
+Methods return values (success/failure)
+Real banking operations need validation
+
+
+Level 3: Encapsulation - Protecting Sensitive Data
+-----------------------------------------------
+Explaining Points:
+
+Private attributes (__balance) = Hidden from outside
+Like PIN/password - not directly accessible
+Getters = Safe way to read data
+Setters = Controlled way to modify data
+Prevents unauthorized access and maintains data integrity
+
+But in Python, we use name mangling (prefix with __) to indicate private attributes, 
+but it's not strictly enforced.
+
+
+Level 4: Class Variables - Bank-wide Settings
+-----------------------------------------------
+Explaining Points:
+
+Class variables = Shared by all accounts (like bank policies)
+Instance variables = Unique to each account
+@classmethod = Methods that work on class level
+@staticmethod = Utility methods (no access to instance or class)
+
+Level 5: Inheritance - Different Account Types
+-----------------------------------------------
+Explaining Points:
+
+Inheritance = Child class gets all features of parent
+SavingsAccount IS-A BankAccount
+super() = Call parent class methods
+Add specialized features to child classes
+Reuse code, avoid duplication
+
+
+Level 6: Polymorphism - UPI Transfer System
+-----------------------------------------------
+Explaining Points:
+
+Polymorphism = Same method name, different behavior
+Different account types handle transfers differently
+Write code once, works with all account types
+Very useful in payment processing systems
+
+Level 7: Composition - Transaction System
+-----------------------------------------------
+Explaining Points:
+
+Composition = HAS-A relationship (not IS-A)
+Account HAS-A Transaction history
+Account HAS-A Card
+Build complex systems from smaller objects
+Real-world: NPCI systems have many interconnected objects
+
+Level 8: Abstract Classes - Payment Gateway Interface
+-----------------------------------------------
+Explaining Points:
+
+Abstract class = Template/contract that child classes must follow
+Cannot create objects of abstract class
+Forces all payment methods to implement required methods
+Ensures consistency across different payment systems
+Real NPCI scenario: All payment apps must follow UPI protocol
+
+
+Level 9: Magic Methods - Smart Account Operations
+-----------------------------------------------
+Explaining Points:
+
+Magic methods (dunder methods) = Special methods with __
+Make objects behave like built-in types
+__str__, __repr__ = String representation
+__eq__, __lt__ = Comparison operators
+__add__ = Addition operator
+Makes code more intuitive and Pythonic
+
+
