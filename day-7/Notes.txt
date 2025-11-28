@@ -1,0 +1,103 @@
+
+Level 1: Understanding Errors - What Goes Wrong?
+-------------------------------------------------
+Explaining Points:
+
+Error = Something unexpected happens in code
+Crash = Program stops completely (BAD for banking!)
+Exception Handling = Catch errors and handle gracefully
+Real NPCI Problem: Payment fails but system should continue
+
+
+Defensive Programming & Error Management Patterns
+--------------------------------------------------
+
+Key Points
+---------
+
+Retry logic
+Fallback values
+Graceful degradation
+Validations to prevent exceptions
+Avoiding bare except
+
+---------------------------------------------
+
+Exception vs Error
+----------------------
+
+Exceptions are events that occur during program execution 
+that disrupt the normal flow of instructions. 
+
+- ValueError
+- TyepeError
+- IndexError
+
+
+Errors are a type of exception that indicates a serious problem 
+that a program should not try to handle.
+
+- SyntaxError
+- MemoryError
+- SystemError
+- RecursionError
+
+
+---------------------------------------------
+
+Best Practices Checklist
+---------------------------------------------
+
+Key Points
+
+Be specific with except
+Don’t hide errors
+Don’t overuse exceptions for logic
+Validate inputs early
+Use custom exceptions where meaningful
+Cleanup using finally
+Use logging, not print
+Let fatal errors propagate
+
+Exception Handling & Error Management
+---------------------------------------------
+
+Use exceptions for expected, recoverable issues; errors for critical failures.
+Structure code cleanly using try / except / else / finally.
+Create custom exceptions for domain clarity.
+Use logging and exception chaining for traceability.
+Never swallow exceptions silently (avoid except:).
+Validate inputs to reduce exceptions proactively.
+Write defensive, resilient production systems using retries, fallbacks, and cleanup.
+
+
+
+---------------------------------------------
+
+Level 1: The Problem - Why Context Managers?
+Explaining Points:
+
+Problem: Forgetting to cleanup resources (files, connections, locks)
+Context Manager = Automatic setup and cleanup
+'with' statement = Python's solution
+Critical in Banking: Must close files, unlock accounts, release connections
+
+
+Level 2: Context Managers - The Elegant SolutionExplaining Points:
+---------------------------------------------
+
+with statement = Automatic setup and cleanup
+Python handles the try-finally for you
+Cleaner, safer code
+Standard way to manage resources
+
+
+
+Level 4: Context Managers with contextlib (Function-based)
+---------------------------------------------
+Explaining Points:
+
+@contextmanager decorator = Create context manager from function
+Simpler than class-based approach
+Use yield to separate setup and cleanup
+Perfect for quick context managers

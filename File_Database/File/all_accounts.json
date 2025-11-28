@@ -1,0 +1,20 @@
+[
+    {
+        "account_number": "ACC001",
+        "holder_name": "Rajesh Kumar",
+        "balance": 50000,
+        "type": "Savings"
+    },
+    {
+        "account_number": "ACC002",
+        "holder_name": "Priya Sharma",
+        "balance": 80000,
+        "type": "Current"
+    },
+    {
+        "account_number": "ACC003",
+        "holder_name": "Amit Patel",
+        "balance": 30000,
+        "type": "Savings"
+    }
+]

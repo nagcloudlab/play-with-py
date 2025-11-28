@@ -1,0 +1,51 @@
+PART 1: FILE HANDLING & DATA PERSISTENCE
+-------------------------------------------
+
+Level 1: Understanding Files - Why We Need Them
+-----------------------------------------------------------
+Explaining Points:
+
+File = Permanent storage (data survives program restart)
+Memory (variables) = Temporary (lost when program ends)
+Banking Need: Transaction logs, account data, settlement files
+File Types: Text files (.txt, .csv, .json, .log)
+
+
+Level 2: Basic File Operations - Read and Write
+-----------------------------------------------------------
+Explaining Points:
+
+Open modes: 'r' (read), 'w' (write), 'a' (append)
+'w' mode: Overwrites existing file
+'a' mode: Adds to end of file
+Always use with: Automatic file closing
+
+# File Modes
+# ==========
+
+'r'  - Read only (file must exist)
+'w'  - Write (creates new file, overwrites if exists)
+'a'  - Append (adds to end, creates if doesn't exist)
+'r+' - Read and write
+'w+' - Write and read (overwrites)
+'a+' - Append and read
+
+
+Level 3: Working with CSV Files - Structured Data
+-----------------------------------------------------------
+Explaining Points:
+
+CSV = Comma-Separated Values
+Standard format for tabular data
+Python's csv module = Easy reading/writing
+Banking use: Account lists, transaction reports, settlement files
+
+
+Level 4: Working with JSON Files - Complex Data
+-----------------------------------------------------------
+Explaining Points:
+
+JSON = JavaScript Object Notation
+Human-readable format
+Perfect for: Nested data, configurations, API responses
+Python dict ↔ JSON conversion

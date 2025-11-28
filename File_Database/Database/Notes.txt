@@ -1,0 +1,89 @@
+
+Level 6: Understanding Databases - Why Not Just Files?
+--------------------------------------------------------
+Explaining Points:
+
+Files = Good for simple data, limited queries
+Databases = Optimized for complex queries, relationships, concurrent access
+SQL = Structured Query Language (industry standard)
+Banking Need: Millions of accounts, complex queries, data integrity
+
+
+
+Level 7: SQLite Basics - Your First Database
+--------------------------------------------------------
+Explaining Points:
+
+SQLite = Lightweight database (no server needed)
+Built into Python = No installation required
+Single file = Easy to manage
+Full SQL support = Industry-standard queries
+
+
+Level 8: Querying Data - SELECT Statements
+--------------------------------------------------------
+Explaining Points:
+
+SELECT = Retrieve data from database
+WHERE = Filter results
+ORDER BY = Sort results
+LIMIT = Limit number of results
+
+Level 9: Updating and Deleting Data
+--------------------------------------------------------
+Explaining Points:
+
+UPDATE = Modify existing records
+DELETE = Remove records
+Always use WHERE = Avoid updating/deleting everything!
+COMMIT = Save changes permanently
+
+Level 10: Transactions - ACID Properties
+--------------------------------------------------------
+Explaining Points:
+
+Transaction = Group of operations (all succeed or all fail)
+ACID Properties:
+
+Atomicity: All or nothing
+Consistency: Data stays valid
+Isolation: Operations don't interfere
+Durability: Changes are permanent
+
+
+Critical for Banking: Money never lost or duplicated
+
+
+---
+
+Popular Python ORMs
+-----------------------
+1. SQLAlchemy ⭐ Most Popular
+
+Pros: Powerful, flexible, industry standard
+Cons: Steeper learning curve
+Use for: Complex applications, large projects
+
+2. Django ORM
+
+Pros: Simple, integrated with Django framework
+Cons: Only works with Django
+Use for: Django web applications
+
+3. Peewee
+
+Pros: Lightweight, simple, similar to Django ORM
+Cons: Less powerful than SQLAlchemy
+Use for: Small to medium projects
+
+4. Tortoise ORM
+
+Pros: Async support, Django-like syntax
+Cons: Newer, smaller community
+Use for: Async applications
+
+5. PonyORM
+
+Pros: Simple syntax, automatic query optimization
+Cons: Smaller community
+Use for: Rapid development

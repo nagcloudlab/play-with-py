@@ -1,0 +1,41 @@
+{
+    "account_number": "ACC001",
+    "holder": {
+        "name": "Rajesh Kumar",
+        "email": "rajesh@example.com",
+        "phone": "+91-9876543210",
+        "address": {
+            "street": "123 MG Road",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pincode": "400001"
+        }
+    },
+    "balance": 50000,
+    "account_type": "Savings",
+    "transactions": [
+        {
+            "id": "TXN001",
+            "amount": 5000,
+            "type": "CREDIT",
+            "date": "2024-01-10"
+        },
+        {
+            "id": "TXN002",
+            "amount": 2000,
+            "type": "DEBIT",
+            "date": "2024-01-12"
+        },
+        {
+            "id": "TXN003",
+            "amount": 3000,
+            "type": "CREDIT",
+            "date": "2024-01-14"
+        }
+    ],
+    "settings": {
+        "sms_alerts": true,
+        "email_alerts": true,
+        "daily_limit": 50000
+    }
+}

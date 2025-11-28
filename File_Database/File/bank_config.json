@@ -1,0 +1,36 @@
+{
+    "bank_name": "NPCI Bank",
+    "bank_code": "NPCI0001",
+    "services": {
+        "UPI": {
+            "enabled": true,
+            "transaction_limit": 100000,
+            "daily_limit": 100000,
+            "fee_percent": 0
+        },
+        "IMPS": {
+            "enabled": true,
+            "transaction_limit": 200000,
+            "daily_limit": 200000,
+            "fee_percent": 0.5
+        },
+        "NEFT": {
+            "enabled": true,
+            "transaction_limit": 1000000,
+            "daily_limit": 1000000,
+            "fee_percent": 0.2
+        }
+    },
+    "account_types": {
+        "Savings": {
+            "min_balance": 1000,
+            "interest_rate": 4.0,
+            "withdrawal_limit": 50000
+        },
+        "Current": {
+            "min_balance": 5000,
+            "interest_rate": 0,
+            "withdrawal_limit": 500000
+        }
+    }
+}

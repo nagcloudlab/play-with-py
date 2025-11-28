@@ -1,0 +1,3 @@
+Account Number: ACC001
+Holder Name: Rajesh Kumar
+Balance: ₹50,000.00
