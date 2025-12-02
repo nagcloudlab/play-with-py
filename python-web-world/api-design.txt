@@ -1,0 +1,109 @@
+
+
+e.g Money-Transfer-System
+---------------------------
+
+steps to design REST-api
+------------------------
+
+step-1: indentify the resource(s) & action(s)
+
+    - account
+    - transaction
+    - user
+    - notification
+
+    - transfer
+    - deposit
+    - withdraw
+
+step-2: define the endpoints aka URIs
+
+    - /accounts
+    - /accounts/{accountId}
+    - /accounts/{accountId}/transactions
+    - /users
+    - /users/{userId}/notifications
+
+    - /transfer
+    - /deposit
+    - /withdraw     
+
+step-3: define the HTTP methods for each endpoint & query parameters if any
+
+    - GET /accounts?status={status}&type={type}&balanceMin={balanceMin}&balanceMax={balanceMax}
+    - GET /accounts/{accountId}
+    - POST /accounts
+    - PUT /accounts/{accountId}
+    - DELETE /accounts/{accountId}
+
+    - GET /accounts/{accountId}/transactions
+    - POST /transfer
+    - POST /deposit
+    - POST /withdraw
+
+    - GET /users
+    - GET /users/{userId}/notifications
+
+step-4: define the request & response payloads
+
+    - JSON or XML format
+    - include necessary fields for each resource
+    - consider pagination for list endpoints
+    - include error handling in responses
+
+
+e.g - GET /accounts/{accountId}
+
+Request:
+    - Path Parameter: accountId
+    - Query Parameters: None
+    - Headers: Authorization, Content-Type
+Response:
+    - 200 OK
+        {
+            "accountId": "12345",
+            "accountType": "savings",
+            "balance": 1000.00,
+            "currency": "USD",
+            "status": "active",
+            "createdAt": "2023-10-01T12:00:00Z",
+            "updatedAt": "2023-10-10T15:30:00Z"
+        }
+    - 404 Not Found
+        {
+            "error": "Account not found"
+        }
+    - 401 Unauthorized
+        {
+            "error": "Unauthorized access"
+        }   
+- POST /transfer    
+Request:
+    - Headers: Authorization, Content-Type
+    - Body:
+        {
+            "fromAccountId": "12345",
+            "toAccountId": "67890",
+            "amount": 250.00,
+            "currency": "USD"
+        }
+Response:
+    - 201 Created
+        {
+            "transactionId": "tx123456",
+            "fromAccountId": "12345",
+            "toAccountId": "67890",
+            "amount": 250.00,
+            "currency": "USD",
+            "status": "completed",
+            "createdAt": "2023-10-15T10:00:00Z"
+        }
+    - 400 Bad Request
+        {
+            "error": "Insufficient funds"
+        }
+    - 401 Unauthorized
+        {
+            "error": "Unauthorized access"
+        }   
